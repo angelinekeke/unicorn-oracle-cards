@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>独角兽神谕卡 - Unicorn Oracle Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦄 独角兽神谕卡</h1>
+            <p class="subtitle">Unicorn Oracle Cards</p>
+            <p class="description">相信魔法，信任直觉 ✨</p>
+        </header>
+
+        <main>
+            <div class="card-container">
+                <div class="card" id="oracleCard">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="unicorn-icon">🦄</div>
+                            <p>点击抽卡</p>
+                        </div>
+                        <div class="card-back">
+                            <div class="card-number" id="cardNumber"></div>
+                            <h2 class="card-title" id="cardTitle"></h2>
+                            <p class="card-keyword">
+                                <span class="label">关键词：</span>
+                                <span id="cardKeyword"></span>
+                            </p>
+                            <p class="card-reading" id="cardReading"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="drawBtn">抽卡</button>
+                <button class="btn btn-secondary" id="resetBtn">重置</button>
+                <button class="btn btn-info" id="showAllBtn">查看全部卡牌</button>
+            </div>
+        </main>
+
+        <section class="all-cards" id="allCardsSection" style="display: none;">
+            <h2>所有卡牌</h2>
+            <div class="cards-grid" id="cardsGrid"></div>
+            <button class="btn btn-secondary" onclick="document.getElementById('allCardsSection').style.display = 'none'">关闭</button>
+        </section>
+
+        <footer>
+            <p>✨ 让魔法照亮你的道路 ✨</p>
+            <p class="footer-credit">Made with 💜 by Angelinekeke</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
